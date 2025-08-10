@@ -1,0 +1,403 @@
+/* LiveGuruCards.module.css - Professional Live Guru Cards Design */
+
+.liveGuruSection {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 100px 0;
+  position: relative;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.sectionIcon {
+  font-size: 3rem;
+  color: #495057;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.sectionTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.sectionSubtitle {
+  font-size: 1.3rem;
+  color: #6c757d;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.guruGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.guruCard {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.guruCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #28a745, #20c997, #17a2b8);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.guruCard:hover::before {
+  transform: scaleX(1);
+}
+
+.guruCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.onlineIndicator {
+  display: flex;
+  align-items: center;
+  background: #dc3545;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.onlineDot {
+  color: #ffffff;
+  font-size: 0.6rem;
+  margin-right: 6px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.priceTag {
+  background: #212529;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.guruInfo {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.guruImage {
+  position: relative;
+  margin-right: 20px;
+}
+
+.profileImage {
+  border-radius: 50%;
+  border: 3px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.guruCard:hover .profileImage {
+  border-color: #28a745;
+  transform: scale(1.05);
+}
+
+.experienceBadge {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  background: #17a2b8;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.guruDetails {
+  flex: 1;
+}
+
+.guruName {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 5px;
+  line-height: 1.2;
+}
+
+.guruSpecialty {
+  color: #6c757d;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.ratingContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+.starIcon {
+  font-size: 0.9rem;
+}
+
+.starFilled {
+  color: #ffc107;
+}
+
+.starEmpty {
+  color: #dee2e6;
+}
+
+.ratingText {
+  font-weight: 600;
+  color: #212529;
+  font-size: 0.9rem;
+}
+
+.reviewsText {
+  color: #6c757d;
+  font-size: 0.8rem;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding: 15px 0;
+  border-top: 1px solid #e9ecef;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.availability {
+  display: flex;
+  align-items: center;
+  color: #6c757d;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.clockIcon {
+  margin-right: 6px;
+  color: #17a2b8;
+}
+
+.languages {
+  display: flex;
+  gap: 6px;
+}
+
+.languageTag {
+  background: #f8f9fa;
+  color: #495057;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid #e9ecef;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 12px;
+}
+
+.bookButton, .chatButton {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  letter-spacing: 0.3px;
+}
+
+.bookButton {
+  background: #212529;
+  color: white;
+}
+
+.bookButton:hover {
+  background: #343a40;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(33, 37, 41, 0.3);
+}
+
+.chatButton {
+  background: white;
+  color: #212529;
+  border: 2px solid #e9ecef;
+}
+
+.chatButton:hover {
+  background: #f8f9fa;
+  border-color: #17a2b8;
+  color: #17a2b8;
+  transform: translateY(-2px);
+}
+
+.buttonIcon {
+  font-size: 0.8rem;
+}
+
+.sectionFooter {
+  text-align: center;
+}
+
+.viewAllButton {
+  background: white;
+  color: #212529;
+  border: 2px solid #e9ecef;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.viewAllButton:hover {
+  background: #f8f9fa;
+  border-color: #17a2b8;
+  color: #17a2b8;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(23, 162, 184, 0.2);
+}
+
+.footerText {
+  color: #6c757d;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .guruGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .liveGuruSection {
+    padding: 80px 0;
+  }
+  
+  .sectionTitle {
+    font-size: 2.8rem;
+  }
+  
+  .sectionSubtitle {
+    font-size: 1.1rem;
+  }
+  
+  .guruGrid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .guruCard {
+    padding: 25px;
+  }
+  
+  .guruInfo {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .guruImage {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  
+  .cardFooter {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  
+  .actionButtons {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 20px;
+  }
+  
+  .sectionTitle {
+    font-size: 2.2rem;
+  }
+  
+  .guruCard {
+    padding: 20px;
+  }
+  
+  .guruName {
+    font-size: 1.2rem;
+  }
+  
+  .bookButton, .chatButton {
+    padding: 10px 14px;
+    font-size: 0.8rem;
+  }
+} 

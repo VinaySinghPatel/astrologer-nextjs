@@ -1,0 +1,237 @@
+.clearDoubtSection {
+    position: relative;
+    border-bottom: 1px solid var(--medium-gray);
+  }
+  
+  .searchHeader {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .searchTitle {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--primary-black);
+    margin-bottom: 15px;
+  }
+  
+  .searchSubtitle {
+    font-size: 1.1rem;
+    color: var(--primary-gray);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .searchContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .searchBox {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: var(--white);
+    border: 2px solid var(--medium-gray);
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 8px 30px var(--shadow-light);
+    transition: all 0.3s ease;
+  }
+  
+  .searchBox:focus-within {
+    border-color: var(--primary-black);
+    box-shadow: 0 12px 40px var(--shadow-medium);
+  }
+  
+  .searchInputWrapper {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .searchIcon {
+    position: absolute;
+    left: 15px;
+    color: var(--primary-gray);
+    font-size: 1.1rem;
+  }
+  
+  .searchInput {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: var(--primary-black);
+    background: transparent;
+  }
+  
+  .searchInput::placeholder {
+    color: var(--primary-gray);
+  }
+  
+  .filtersWrapper {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .filterDropdown {
+    position: relative;
+  }
+  
+  .filterBtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: var(--light-gray);
+    border: none;
+    border-radius: 10px;
+    color: var(--primary-black);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+  
+  .filterBtn:hover {
+    background: var(--medium-gray);
+  }
+  
+  .filterIcon {
+    font-size: 0.8rem;
+  }
+  
+  .chevronIcon {
+    font-size: 0.7rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .filterBtn:hover .chevronIcon {
+    transform: rotate(180deg);
+  }
+  
+  .dropdownMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    border: 1px solid var(--medium-gray);
+    border-radius: 10px;
+    box-shadow: 0 8px 25px var(--shadow-light);
+    z-index: 1000;
+    overflow: hidden;
+    margin-top: 5px;
+  }
+  
+  .dropdownItem {
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    font-size: 0.9rem;
+  }
+  
+  .dropdownItem:hover {
+    background: var(--light-gray);
+  }
+  
+  .active {
+    background: var(--primary-black);
+    color: var(--white);
+  }
+  
+  .searchButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 25px;
+  background: var(--primary-white);
+  color: var(--primary-black);
+  border: 2px solid var(--primary-black);
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+  
+  .searchButton:hover {
+  background: var(--primary-black);
+  color: var(--primary-white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(26, 26, 26, 0.2);
+}
+  
+  .quickSuggestions {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .suggestionsLabel {
+    font-weight: 500;
+    color: var(--primary-gray);
+    margin-right: 15px;
+  }
+  
+  .suggestionsTags {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .suggestionTag {
+    padding: 8px 16px;
+    background: var(--light-gray);
+    color: var(--primary-black);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .suggestionTag:hover {
+    background: var(--primary-black);
+    color: var(--white);
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 768px) {
+    .searchBox {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .searchInputWrapper {
+      width: 100%;
+    }
+  
+    .filtersWrapper {
+      width: 100%;
+      justify-content: space-between;
+    }
+  
+    .filterBtn {
+      flex: 1;
+      justify-content: center;
+    }
+  
+    .searchButton {
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .suggestionsTags {
+      margin-top: 15px;
+    }
+  
+    .suggestionsLabel {
+      display: block;
+      margin-bottom: 15px;
+      margin-right: 0;
+    }
+  }
+  
